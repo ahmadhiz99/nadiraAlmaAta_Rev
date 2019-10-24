@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+import com.google.android.gms.maps.GoogleMapOptions;
+
 import org.w3c.dom.Text;
 
 
@@ -32,18 +34,19 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home,
                 container, false);
-        //litemaps
-//      GoogleMapOptions options = new GoogleMapOptions().liteMode(true);
-//      maplite = (CardView) rootView.findViewById(R.id.maplite);
-//        maplite.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                maplite();
-//            }
-//        });
+//        litemaps
+      GoogleMapOptions options = new GoogleMapOptions().liteMode(true);
+      maplite = (CardView) rootView.findViewById(R.id.maplite);
+        maplite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                maplite();
+            }
+        });
 
         //TextView Email
         //Flipper
+
         int images[] = {R.drawable.pengertian, R.drawable.visi, R.drawable.misi};
         viewFlipper = rootView.findViewById(R.id.tv_flipper);
 
@@ -56,7 +59,7 @@ public class Home extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                updateDetail();
+                startActivity(new Intent(getActivity() , MapsActivity.class));
             }
         });
 
@@ -66,7 +69,7 @@ public class Home extends Fragment {
         button_umkm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                umkm();
+                umkm();
             }
         });
 
@@ -75,26 +78,26 @@ public class Home extends Fragment {
         buttonsedekah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                sedekah();
+                sedekah();
             }
         });
         return rootView;
     }
 
-//    public void updateDetail() {
-//        Intent intent = new Intent(getActivity(), MapsActivity.class);
-//        startActivity(intent);
-//    }
-//
-//    public void umkm() {
-//        Intent intent = new Intent(getActivity(), MapsActivity2.class);
-//        startActivity(intent);
-//    }
-//
-//    public void sedekah() {
-//        Intent intent = new Intent(getActivity(), MapsActivity3.class);
-//        startActivity(intent);
-//    }
+    public void updateDetail() {
+        Intent intent = new Intent(getActivity(), MapsActivity.class);
+        startActivity(intent);
+    }
+
+    public void umkm() {
+        Intent intent = new Intent(getActivity(), MapsActivity2.class);
+        startActivity(intent);
+    }
+
+    public void sedekah() {
+        Intent intent = new Intent(getActivity(), MapsActivity3.class);
+        startActivity(intent);
+    }
 
     //Flipper image
     public void flipperImage(int image){

@@ -34,7 +34,6 @@ public class Setelan extends Fragment {
     private ProgressBar progressBar;
     private FirebaseAuth auth;
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -93,21 +92,20 @@ public class Setelan extends Fragment {
             progressBar.setVisibility(View.GONE);
         }
 
-
+//change password btn is visible
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 oldEmail.setVisibility(View.GONE);
-
                 password.setVisibility(View.GONE);
                 newPassword.setVisibility(View.VISIBLE);
-
                 changePassword.setVisibility(View.VISIBLE);
-
                 remove.setVisibility(View.GONE);
             }
         });
 
+
+        //change password real
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,9 +175,7 @@ public class Setelan extends Fragment {
 
     @SuppressLint("SetTextI18n")
     private void setDataToView(FirebaseUser user) {
-
         email.setText("User Email: " + user.getEmail());
-
 
     }
 

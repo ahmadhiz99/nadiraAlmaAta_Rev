@@ -29,11 +29,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private Button btnChangePassword, btnRemoveUser,
-//            changePassword, remove, signOut;
-//    private TextView email, emailshow;
-//    private EditText oldEmail, password, newPassword;
-//    private ProgressBar progressBar;
     private FirebaseAuth auth;
 
     private DrawerLayout drawer;
@@ -99,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     switch (item.getItemId()) {
 
                         case R.id.navigation_artikel:
-                            selectedFragment = new Artikel();
+                            selectedFragment = new ArtikelBerita();
                             break;
                         case R.id.navigation_konsultasi:
                             selectedFragment = new Konsultasi();
