@@ -1,0 +1,109 @@
+{
+  "project_info": {
+    "project_number": "308368439137",
+    "firebase_url": "https://nadirauaa-5f115.firebaseio.com",
+    "project_id": "nadirauaa-5f115",
+    "storage_bucket": "nadirauaa-5f115.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308368439137:android:6a35b6f2d502e66609b720",
+        "android_client_info": {
+          "package_name": "com.d.movie_katalog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308368439137-er8410hbq9e6m0b3cu87abs4ch2ho1rh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.d.movie_katalog",
+            "certificate_hash": "b186dd7f933210891dd886a09b06c157873ec0a5"
+          }
+        },
+        {
+          "client_id": "308368439137-6rns6u5infedbklhlfc1q52rrcvb3nu3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.d.movie_katalog",
+            "certificate_hash": "760efac666583e6a0f70f288b42d0592236200b5"
+          }
+        },
+        {
+          "client_id": "308368439137-2aao47v5m1ksaqu95gug266bhhc5nv6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBJfeVCX7i3H8DgwQ-v8f-F0viXxiReuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308368439137-2aao47v5m1ksaqu95gug266bhhc5nv6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308368439137:android:dbf36d4a5871725e09b720",
+        "android_client_info": {
+          "package_name": "com.nadira.localhost.nadhira"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308368439137-v6hreeutl8l3hr3gq6uces5n5eg731ch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nadira.localhost.nadhira",
+            "certificate_hash": "b186dd7f933210891dd886a09b06c157873ec0a5"
+          }
+        },
+        {
+          "client_id": "308368439137-ju163ef6rubrrhtqtj94mbdo68a6ltje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nadira.localhost.nadhira",
+            "certificate_hash": "c0e73a8510f6f618d20fabdbe8b460f29b81489f"
+          }
+        },
+        {
+          "client_id": "308368439137-qmjcsaavnbhm4vsdkhutuo867eaoup6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nadira.localhost.nadhira",
+            "certificate_hash": "f119e298b301661585787562be0db3439a4f2cad"
+          }
+        },
+        {
+          "client_id": "308368439137-2aao47v5m1ksaqu95gug266bhhc5nv6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBJfeVCX7i3H8DgwQ-v8f-F0viXxiReuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308368439137-2aao47v5m1ksaqu95gug266bhhc5nv6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
