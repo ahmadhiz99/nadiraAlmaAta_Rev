@@ -53,6 +53,16 @@
             android:id="@+id/btn_login"
             />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|bottom"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="162dp"
+            tools:ignore="MissingConstraints" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,16 +81,15 @@
             android:textColor="#ffff"
             />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorAccent"
+            android:text="Skip"
+            android:id="@+id/btn_skip"
+            />
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="77dp"
-        android:visibility="gone"
-        tools:ignore="MissingConstraints"
-        />
 
 </android.support.constraint.ConstraintLayout>

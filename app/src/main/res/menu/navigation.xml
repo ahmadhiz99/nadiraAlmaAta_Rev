@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Pencarian Lokasi" />
+
+    <item
+        android:id="@+id/navigation_artikel"
+        android:icon="@drawable/ic_art_track_black_24dp"
+        android:title="Berita" />
+
+    <item
+        android:id="@+id/navigation_konsultasi"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Konsultasi" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_smartphone_black_24dp"
+        android:title="Pengaturan" />
+
+</menu>

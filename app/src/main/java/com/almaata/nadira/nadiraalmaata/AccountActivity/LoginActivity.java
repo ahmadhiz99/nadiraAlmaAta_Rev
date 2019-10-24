@@ -1,5 +1,7 @@
 package com.almaata.nadira.nadiraalmaata.AccountActivity;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +13,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.almaata.nadira.nadiraalmaata.Home;
 import com.almaata.nadira.nadiraalmaata.MainActivity;
 import com.almaata.nadira.nadiraalmaata.R;
+import com.almaata.nadira.nadiraalmaata.Setelan;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,11 +27,19 @@ public class LoginActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
-    private Button btnSignup, btnLogin, btnReset;
+    private Button btnSignup, btnLogin, btnReset, btnSkip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //fragment eccx
+//        Setelan fr = new Setelan();
+//        Bundle args = new Bundle();
+//        fr.setArguments(args);
+//        FragmentManager fm = getFragmentManager();
+//        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+//        fragmentTransaction.commit();
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -44,6 +56,13 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_login);
         btnSignup = findViewById(R.id.signUp);
         btnReset = findViewById(R.id.btn_reset_password);
+        btnSkip = findViewById(R.id.btn_skip);
+        btnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            }
+        });
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -84,6 +103,8 @@ public class LoginActivity extends AppCompatActivity {
                             } else {
                                 Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                             }
+                            progressBar.setVisibility(View.GONE);
+
                         } else {
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);

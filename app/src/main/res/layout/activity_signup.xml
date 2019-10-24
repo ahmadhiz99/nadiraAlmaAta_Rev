@@ -81,7 +81,7 @@
             android:background="@null"
             android:text="@string/login"
             android:textAllCaps="false"
-            android:textColor="#ffff"
+            android:textColor="@color/colorPrimary"
             android:textSize="15sp" />
     </LinearLayout>
 
