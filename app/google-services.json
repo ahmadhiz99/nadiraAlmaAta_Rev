@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:308368439137:android:7c3b866785272ad309b720",
+        "android_client_info": {
+          "package_name": "com.almaata.nadira.nadiraalmaata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308368439137-2aao47v5m1ksaqu95gug266bhhc5nv6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBJfeVCX7i3H8DgwQ-v8f-F0viXxiReuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308368439137-2aao47v5m1ksaqu95gug266bhhc5nv6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:308368439137:android:6a35b6f2d502e66609b720",
         "android_client_info": {
           "package_name": "com.d.movie_katalog"
