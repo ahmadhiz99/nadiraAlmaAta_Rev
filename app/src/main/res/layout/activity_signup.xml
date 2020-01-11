@@ -25,6 +25,24 @@
 
 
         <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/nama_lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@android:color/white" />
+
+        <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,8 +50,6 @@
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:textColor="@android:color/white" />
-
-
 
 
         <EditText
@@ -48,7 +64,6 @@
             android:maxLines="1"
             android:textColor="@android:color/white"
             tools:ignore="InvalidImeActionId" />
-
 
         <Button
             android:id="@+id/sign_up_button"
@@ -83,6 +98,7 @@
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
             android:textSize="15sp" />
+
     </LinearLayout>
 
     <ProgressBar
@@ -91,6 +107,7 @@
         android:layout_height="30dp"
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="20dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

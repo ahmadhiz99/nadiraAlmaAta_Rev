@@ -17,12 +17,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity {
-    private EditText inputEmail, inputPassword;     //hit option + enter if you on mac , for windows hit ctrl + enter
+    private EditText inputEmail, inputPassword, username;     //hit option + enter if you on mac , for windows hit ctrl + enter
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    private FirebaseDatabase mFirebaseInstance;
+    private DatabaseReference mFirebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +36,15 @@ public class SignupActivity extends AppCompatActivity {
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
+        username = findViewById(R.id.et_username);
+
+
 
         btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,8 +64,8 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+                final String email = inputEmail.getText().toString().trim();
+                final String password = inputPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -90,8 +97,29 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(SignupActivity.this, MainActivity.class));
-                                    finish();
+
+                                    FirebaseUser currentUser = auth.getCurrentUser();
+                                    String uid = currentUser.getUid();
+
+                                    startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                                    mFirebaseInstance = FirebaseDatabase.getInstance();
+                                    //get reference user
+                                    mFirebaseDatabase = mFirebaseInstance.getReference();
+                                    String input =  username.getText().toString();
+
+                                    mFirebaseDatabase.child("User").child(uid).setValue(input);
+                                    mFirebaseDatabase.child("User").child(uid).child("email").setValue(email);
+                                    mFirebaseDatabase.child("User").child(uid).child("password").setValue(password);
+                                    mFirebaseDatabase.child("User").child(uid).child("saldo").setValue(0);
+                                    mFirebaseDatabase.child("User").child(uid).child("jenis_kelammin").setValue(0);
+                                    mFirebaseDatabase.child("User").child(uid).child("tgl_lahir").setValue(0);
+
+//                                    finish();
+
+
+
+
+
                                 }
                             }
                         });

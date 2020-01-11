@@ -19,7 +19,7 @@
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/nadira"
             android:contentDescription="@string/logo"
             />
 
@@ -75,7 +75,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lupa_password"
+            android:text="@string/daftar"
             android:id="@+id/signUp"
             android:background="@null"
             android:textColor="#ffff"

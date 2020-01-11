@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nadiraa</string>
+    <string name="app_name">Nadira</string>
     <string name="logo">logo_deskripsi</string>
     <string name="login">Login</string>
     <string name="lupa_password">Lupa Password</string>
@@ -29,5 +29,6 @@
     <string name="ok">1</string>
     <string name="title_activity_maps2">Map</string>
     <string name="title_activity_maps3">Map</string>
+    <string name="daftar">daftar</string>
 
 </resources>

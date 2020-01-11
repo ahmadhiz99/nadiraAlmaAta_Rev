@@ -29,7 +29,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Setelan extends Fragment {
     private Button btnChangePassword, btnRemoveUser,
             changePassword, remove, signOut;
-    private TextView email;
+    private TextView email, emailhome;
     private EditText oldEmail, password, newPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
@@ -44,7 +44,7 @@ public class Setelan extends Fragment {
         //get firebase auth instance
         auth = FirebaseAuth.getInstance();
         email = (TextView) rootView.findViewById(R.id.useremail);
-
+        emailhome =(TextView) rootView.findViewById(R.id.tv_emailShow);
         //get current user
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         setDataToView(user);
@@ -174,7 +174,7 @@ public class Setelan extends Fragment {
     }//end onCreate
 
     @SuppressLint("SetTextI18n")
-    private void setDataToView(FirebaseUser user) {
+    public void setDataToView(FirebaseUser user) {
         email.setText("User Email: " + user.getEmail());
 
     }

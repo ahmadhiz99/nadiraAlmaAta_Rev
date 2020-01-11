@@ -55,6 +55,18 @@
                 android:textStyle="bold"
                 />
             <TextView
+                android:id="@+id/tv_saldoshow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saldo"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                />
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Kategori Sampah"
